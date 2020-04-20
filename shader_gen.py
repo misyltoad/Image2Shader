@@ -6,7 +6,7 @@ import numpy
 img = imageio.imread('image.png')
 
 print("#version 450")
-print("layout(location = 0) out vec4 c;void main(){uint a[" + str(img.shape[0]) + "][" + str(img.shape[1]) + "] = {", end = '')
+print("layout(location = 0) out vec4 c;void main(){uint a[" + str(img.shape[0]) + "][" + str(img.shape[1]) + "]={", end = '')
 for row in img:
     print("{", end = '')
     for val in row:
